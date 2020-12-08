@@ -96,10 +96,13 @@ class Generator extends React.Component {
         userValue = email;
         break;
       case "calendar":
-        const arr = new Date(calendar).toDateString().split(" ").slice(1);
-        const birthday = `${arr[0]}  ${arr[1]}, ${arr[2]}`
+        const arr = new Date(calendar)
+          .toDateString()
+          .split(" ")
+          .slice(1);
+        const birthday = `${arr[0]}  ${arr[1]}, ${arr[2]}`;
         userLabel = "My birthday is";
-        userValue = birthday
+        userValue = birthday;
         break;
       case "location":
         userLabel = "My address is";
@@ -118,7 +121,12 @@ class Generator extends React.Component {
     }
 
     if (!profile) {
-      return <LoadingContainer>Loading...</LoadingContainer>;
+      return (
+        <>
+          <GlobalStyle />
+          <LoadingContainer>Loading...</LoadingContainer>;
+        </>
+      );
     }
 
     return (
@@ -126,7 +134,7 @@ class Generator extends React.Component {
         <GlobalStyle />
         <HeaderContainer>
           <Line />
-          <UserPhoto sex={"men"} id={36} src={this.state.image} />
+          <UserPhoto src={this.state.image} />
         </HeaderContainer>
         <UserInfo>
           <UserLabel>{userLabel}</UserLabel>

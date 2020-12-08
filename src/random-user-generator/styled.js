@@ -7,9 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
+    background-color: #eee;
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -26,12 +26,15 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 20px 0;
   position: relative;
   background-color: #fff;
   width: 730px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  @media screen and (max-width: 768px) {
+  }
 `;
 export const HeaderContainer = styled.div`
   display: flex;
@@ -42,9 +45,10 @@ export const HeaderContainer = styled.div`
   margin-bottom: 20px;
 `;
 export const UserPhoto = styled.img.attrs(props => {
-  const { sex, id, src } = props;
+  const { src } = props;
   const imageSrc =
-    src || `https://randomuser.me/api/portraits/${sex}/${id}.jpg`;
+    src ||
+    `https://bit.ly/3lXo30s`;
   return {
     src: imageSrc
   };
@@ -82,6 +86,9 @@ export const UserValue = styled.div`
   align-items: center;
   color: #2c2e31;
   font-size: 38px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 export const SpriteContainer = styled.div`
   display: flex;
@@ -109,7 +116,11 @@ export const Line = styled.div`
 `;
 export const LoadingContainer = styled.div`
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
 `;

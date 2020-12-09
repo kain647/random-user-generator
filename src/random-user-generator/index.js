@@ -10,7 +10,8 @@ import {
   SpriteIcon,
   SpriteContainer,
   HeaderContainer,
-  LoadingContainer
+  LoadingContainer,
+  Loading
 } from "./styled";
 
 class Generator extends React.Component {
@@ -122,10 +123,10 @@ class Generator extends React.Component {
 
     if (!profile) {
       return (
-        <>
+        <LoadingContainer>
           <GlobalStyle />
-          <LoadingContainer>Loading...</LoadingContainer>;
-        </>
+          <Loading>Loading...</Loading>
+        </LoadingContainer>
       );
     }
 

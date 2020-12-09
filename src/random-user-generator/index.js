@@ -11,7 +11,11 @@ import {
   SpriteContainer,
   HeaderContainer,
   LoadingContainer,
-  Loading
+  Loading,
+  Header,
+  Global,
+  Title,
+  Subtitle
 } from "./styled";
 
 class Generator extends React.Component {
@@ -131,31 +135,40 @@ class Generator extends React.Component {
     }
 
     return (
-      <Container>
-        <GlobalStyle />
-        <HeaderContainer>
-          <Line />
-          <UserPhoto src={this.state.image} />
-        </HeaderContainer>
-        <UserInfo>
-          <UserLabel>{userLabel}</UserLabel>
-          <UserValue>{userValue}</UserValue>
-        </UserInfo>
-        <SpriteContainer>
-          {icons.map((icon, i) => {
-            const { index, title } = icon;
-            return (
-              <SpriteIcon
-                key={title}
-                index={index}
-                title={title}
-                active={active === title}
-                onClick={() => this.setState({ active: title })}
-              />
-            );
-          })}
-        </SpriteContainer>
-      </Container>
+      <Global>
+        <Header>
+          <Title>Random User Generator</Title>
+          <Subtitle>
+            A free, open-source API for generating random user data. Like Lorem
+            Ipsum, but for people.
+          </Subtitle>
+        </Header>
+        <Container>
+          <GlobalStyle />
+          <HeaderContainer>
+            <Line />
+            <UserPhoto src={this.state.image} />
+          </HeaderContainer>
+          <UserInfo>
+            <UserLabel>{userLabel}</UserLabel>
+            <UserValue>{userValue}</UserValue>
+          </UserInfo>
+          <SpriteContainer>
+            {icons.map((icon, i) => {
+              const { index, title } = icon;
+              return (
+                <SpriteIcon
+                  key={title}
+                  index={index}
+                  title={title}
+                  active={active === title}
+                  onClick={() => this.setState({ active: title })}
+                />
+              );
+            })}
+          </SpriteContainer>
+        </Container>
+      </Global>
     );
   }
 }

@@ -35,6 +35,11 @@ export const Header = styled.div`
   width: 100%;
   height: 500px;
   background: #2c2e31;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 export const Title = styled.h1`
   display: flex;
@@ -50,6 +55,16 @@ export const Subtitle = styled.p`
   color: #fff;
   font-size: 18px;
   font-weight: 100;
+  .colorText {
+    color: #08a;
+    padding: 0px 5px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.5;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -63,8 +78,6 @@ export const Container = styled.div`
   width: 730px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
-  @media screen and (max-width: 768px) {
-  }
 `;
 export const HeaderContainer = styled.div`
   display: flex;

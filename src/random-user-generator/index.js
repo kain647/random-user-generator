@@ -139,8 +139,15 @@ class Generator extends React.Component {
         <Header>
           <Title>Random User Generator</Title>
           <Subtitle>
-            A free, open-source API for generating random user data. Like Lorem
-            Ipsum, but for people.
+            A free,
+            <a
+              className="colorText"
+              href=""
+            >
+              open-source
+            </a>
+            API for generating random user data. Like Lorem Ipsum, but for
+            people.
           </Subtitle>
         </Header>
         <Container>

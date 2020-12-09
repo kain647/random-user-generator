@@ -46,9 +46,7 @@ export const HeaderContainer = styled.div`
 `;
 export const UserPhoto = styled.img.attrs(props => {
   const { src } = props;
-  const imageSrc =
-    src ||
-    `https://bit.ly/3lXo30s`;
+  const imageSrc = src || `https://bit.ly/3lXo30s`;
   return {
     src: imageSrc
   };
@@ -115,6 +113,9 @@ export const Line = styled.div`
   z-index: 0;
 `;
 export const LoadingContainer = styled.div`
+  display: flex;
+`;
+export const Loading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

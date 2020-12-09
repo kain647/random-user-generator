@@ -4,7 +4,7 @@ import sprites from "../image/card_icons.png";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -23,6 +23,34 @@ export const GlobalStyle = createGlobalStyle`
     monospace;
   }
 `;
+export const Global = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  background: #2c2e31;
+`;
+export const Title = styled.h1`
+  display: flex;
+  margin: 0;
+  padding-top: 50px;
+  font-size: 48px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #fff;
+`;
+export const Subtitle = styled.p`
+  display: flex;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,9 +58,11 @@ export const Container = styled.div`
   align-items: center;
   padding: 20px 0;
   position: relative;
+  top: -180px;
   background-color: #fff;
   width: 730px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
   @media screen and (max-width: 768px) {
   }
 `;

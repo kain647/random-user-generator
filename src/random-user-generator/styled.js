@@ -5,10 +5,8 @@ import sprites from "../image/card_icons.png";
 export const GlobalStyle = createGlobalStyle`
   body {
     display: block;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #eee;
     margin: 0;
     padding: 0;
@@ -36,6 +34,8 @@ export const Header = styled.div`
   height: 500px;
   background: #2c2e31;
   @media screen and (max-width: 768px) {
+    display: flex;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -78,7 +78,10 @@ export const Container = styled.div`
   background-color: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   @media screen and (max-width: 768px) {
+    display: flex;
+    height: 550px;
     width: 100%;
+    top: 0;
   }
 `;
 export const HeaderContainer = styled.div`
@@ -112,7 +115,10 @@ export const UserPhoto = styled.img.attrs(props => {
 `;
 
 export const UserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
+  text-align: center;
 `;
 
 export const UserLabel = styled.div`
@@ -136,6 +142,11 @@ export const UserValue = styled.div`
 export const SpriteContainer = styled.div`
   display: flex;
   gap: 8px;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 `;
 
 export const SpriteIcon = styled.div`

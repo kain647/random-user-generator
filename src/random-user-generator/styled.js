@@ -74,10 +74,12 @@ export const Container = styled.div`
   padding: 20px 0;
   position: relative;
   top: -180px;
-  background-color: #fff;
   width: 730px;
+  background-color: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const HeaderContainer = styled.div`
   display: flex;

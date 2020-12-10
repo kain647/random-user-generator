@@ -140,10 +140,7 @@ class Generator extends React.Component {
           <Title>Random User Generator</Title>
           <Subtitle>
             A free,
-            <a
-              className="colorText"
-              href=""
-            >
+            <a className="colorText" href="">
               open-source
             </a>
             API for generating random user data. Like Lorem Ipsum, but for

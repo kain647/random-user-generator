@@ -12,6 +12,7 @@ import {
   HeaderContainer,
   LoadingContainer,
   Loading,
+  Loader,
   Header,
   Global,
   Title,
@@ -129,7 +130,9 @@ class Generator extends React.Component {
       return (
         <LoadingContainer>
           <GlobalStyle />
-          <Loading>Loading...</Loading>
+          <Loading>
+            <Loader/>
+          </Loading>
         </LoadingContainer>
       );
     }

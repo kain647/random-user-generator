@@ -176,8 +176,57 @@ export const Loading = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
   background-color: #eee;
   margin: 0;
   padding: 0;
+`;
+export const Loader = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  margin: -25px auto 0;
+  border-radius: 50%;
+  background: #ffffff;
+  background: linear-gradient(
+    to right,
+    #ffffff 10%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  animation: loader 1.5s infinite linear;
+  transform: translateZ(0);
+  &:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    border-radius: 100% 0 0 0;
+  }
+  &:after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 `;
